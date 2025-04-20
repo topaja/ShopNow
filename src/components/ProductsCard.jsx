@@ -18,28 +18,27 @@ const ProductsCard = ({ product, onViewDetails }) => {
   // Check if product is already in cart
   const isInCart = cartItems.some((item) => item.id === product.id);
 
-const handleAddToCart = () => {
-  if (isInCart) {
-    navigate("/cart"); // Navigate to cart page
-  } else {
-    dispatch(addToCart(product));
-    // Updated toast notification
-    toast.success("Item added to cart", {
-      position: "bottom-right",
-      autoClose: 2000,
-      style: {
-        backgroundColor: "#fff",
-        color: "#333",
-        boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-        borderLeft: "4px solid #28a745",
-        padding: "12px 24px",
-        fontSize: "14px",
-      },
-    });
-  }
-};
+  const handleAddToCart = () => {
+    if (isInCart) {
+      navigate("/cart");
+    } else {
+      dispatch(addToCart(product));
+      toast.success("Item added to cart", {
+        position: "bottom-right",
+        autoClose: 2000,
+        style: {
+          backgroundColor: "#fff",
+          color: "#333",
+          boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+          borderLeft: "4px solid #28a745",
+          padding: "12px 24px",
+          fontSize: "14px",
+        },
+      });
+    }
+  };
   return (
-    <div className="w-[280px] h-[450px] bg-white rounded-lg shadow-lg p-4 group relative overflow-hidden mb-8">
+    <div className="w-[280px] h-[470px] bg-white rounded-lg shadow-lg p-4 group relative overflow-hidden mb-8">
       <div className="relative">
         <img
           src={product.image}
@@ -60,7 +59,9 @@ const handleAddToCart = () => {
       </div>
       <div className="mt-4">
         <h3 className="text-md font-medium">{product.name}</h3>
-        <h3 className="text-sm font-base text-[#838383] mt-1">{product.category}</h3>
+        <h3 className="text-sm font-base text-[#838383] mt-1">
+          {product.category}
+        </h3>
         <div className="flex items-center mt-2">
           <span className="text-yellow-400">★</span>
           <span className="text-yellow-400">★</span>
@@ -76,7 +77,7 @@ const handleAddToCart = () => {
       </div>
 
       {/* Hover Effect */}
-      <div className="absolute bottom-0 left-0 w-full bg-[#007AFF] text-white flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute bottom-0 left-0 w-full bg-[#007AFF] text-white flex justify-between items-center md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 opacity-100 sm:opacity-100">
         <button
           className={`flex items-center gap-2 w-[85%] justify-center hover:bg-black py-2 ${
             isInCart ? "bg-green-600 hover:bg-green-500" : ""

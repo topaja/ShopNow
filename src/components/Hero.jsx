@@ -32,23 +32,25 @@ const Hero = () => {
           Summer Offer 2025 Collection
         </p>
         <div className="text-center sm:text-start w-full mt-4">
-          <button
-            className={`btnHover cursor-pointer text-lg md:text-[20px] border rounded-full  px-10 py-2 ${
-              animate ? "fade-in delay-3" : "opacity-0"
-            }`}
-          >
-            Shop Now
-          </button>
+          <a href="#products">
+            <button
+              className={`btnHover cursor-pointer text-lg md:text-[20px] border rounded-full  px-10 py-2 ${
+                animate ? "fade-in delay-3" : "opacity-0"
+              }`}
+            >
+              Shop Now
+            </button>
+          </a>
         </div>
       </div>
       <div
         id="heroRight"
-        className=" w-full sm:w-[50%] h-full relative flex justify-center"
+        className="w-full sm:w-[50%] h-full relative flex justify-center"
       >
         <img
           src={heroImg}
           alt="heroImage"
-          className={`h-[350px] absolute bottom-0 sm:h-[400px] lg:h-[470px] ${
+          className={`max-[350px]:h-[250px] max-[400px]:h-[300px] h-[350px] absolute bottom-0 sm:h-[400px] lg:h-[470px] ${
             animate ? "slide-up" : "opacity-0"
           }`}
         />

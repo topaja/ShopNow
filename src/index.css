@@ -2,6 +2,7 @@
 @import "tailwindcss";
 * {
   font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Hero Component styles */

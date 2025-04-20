@@ -44,9 +44,9 @@ const handleLogout = () => {
 };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm flex justify-between items-center p-4 w-full">
+    <nav className="sticky top-0 z-50 bg-white shadow-sm flex justify-between items-center p-4 w-full max-[350px]:px-2">
       {/* Logo */}
-      <div className="w-[20%] flex justify-center ml-4">
+      <div className="min-w-[80px] w-[20%] flex justify-center ml-4">
         <Link to="/home">
           <img
             src={Nav_assests.logo}
@@ -70,12 +70,12 @@ const handleLogout = () => {
       </ul>
 
       {/* Right Side Navigation */}
-      <div className="flex items-center gap-6 sm:w-[20%] justify-end pr-4">
+      <div className="flex items-center gap-6 max-[350px]:gap-2 sm:w-[20%] justify-end pr-4">
         {/* Cart Icon */}
         <Link to="/cart" className="relative">
           <FontAwesomeIcon
             icon={faShoppingCart}
-            className="text-xl text-black hover:text-[#2577FD] transition-colors"
+            className="max-[500px]:text-lg text-xl text-black hover:text-[#2577FD] transition-colors"
           />
           {cartItems.length > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
@@ -110,7 +110,7 @@ const handleLogout = () => {
             </>
           ) : (
             <Link to="/login">
-              <button className="rounded-full px-6 py-2 text-sm bg-[#2577FD] text-white btnHover transition-colors">
+              <button className="max-[500px]:text-xs text-nowrap rounded-full max-[350px]:px-4 max-[350px]:py-1.5 px-6 py-2 text-sm bg-[#2577FD] text-white btnHover transition-colors">
                 Sign In
               </button>
             </Link>
