@@ -53,7 +53,7 @@ const About = () => {
         </div>
 
         {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 justify-center px-20 ">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16 justify-center px-20 ">
           <div className="text-start hover:bg-[#C8EBFF] p-8 transition-all duration-300 ease-in-out">
             <h3 className="text-xl font-medium mb-4">Our Vision</h3>
             <p className="text-gray-600">

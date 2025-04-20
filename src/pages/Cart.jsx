@@ -63,7 +63,7 @@ const Cart = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8 text-sm">
+    <div className="container mx-auto px-4 py-8 text-xs sm:text-sm">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
         <div className="lg:col-span-3 space-y-6">
           <div className="overflow-x-auto">
@@ -88,14 +88,14 @@ const Cart = () => {
                         key={item.id}
                         className="text-center border-b border-gray-300"
                       >
-                        <td className="p-6">
+                        <td className="p-4">
                           <img
                             src={item.image}
                             alt={item.name}
                             className="w-16 h-16 object-contain mx-auto"
                           />
                         </td>
-                        <td className="p-6 text-nowrap">{item.name}</td>
+                        <td className="p-6 min-w-[200px] text-start">{item.name}</td>
                         <td className="p-6">₹{item.price}</td>
                         <td className="p-6">
                           <div className="flex items-center justify-center gap-4">

@@ -24,7 +24,7 @@ const ProductsCard = ({ product, onViewDetails }) => {
     } else {
       dispatch(addToCart(product));
       toast.success("Item added to cart", {
-        position: "bottom-right",
+        position: "top-right",
         autoClose: 2000,
         style: {
           backgroundColor: "#fff",

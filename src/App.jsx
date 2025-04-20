@@ -21,7 +21,7 @@ const App = () => {
   return (
     <div className="relative">
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -35,12 +35,17 @@ const App = () => {
           fontSize: "14px",
           padding: "12px",
           minHeight: "unset",
+          // width: "auto",
+          // maxWidth: "450px",
         }}
         toastStyle={{
           backgroundColor: "#fff",
           color: "#333",
           boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
           padding: "12px 24px",
+          // margin: "0",
+          // minHeight: "auto",
+          // height: "auto",
         }}
       />
       {/* Main Content */}
